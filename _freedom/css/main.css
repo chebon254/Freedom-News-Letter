@@ -372,7 +372,7 @@ body {
   place-items: center !important;
   height: 25rem;
   position: absolute;
-  bottom: -2%;
+  bottom: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -530,3 +530,9 @@ body {
   opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */
+@media (min-width: 1326px) and (max-width: 1989px) {
+  .main-content .form-part .svg-rocket #Group1 #rocket {
+    -webkit-transform: translateY(40vh) !important;
+            transform: translateY(40vh) !important;
+  }
+}
