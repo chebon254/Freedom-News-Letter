@@ -512,8 +512,6 @@ body {
 }
 
 .main-content .form-part .svg-rocket #Group1 #rocket {
-  -webkit-transform: translateY(44vh);
-          transform: translateY(44vh);
   -webkit-transform-origin: center;
           transform-origin: center;
 }
@@ -534,5 +532,19 @@ body {
   .main-content .form-part .svg-rocket #Group1 #rocket {
     -webkit-transform: translateY(40vh) !important;
             transform: translateY(40vh) !important;
+  }
+}
+/*# sourceMappingURL=main.css.map */
+@media only screen and (max-width: 1325px) {
+  .main-content .form-part .svg-rocket #Group1 #rocket {
+    -webkit-transform: translateY(44vh) !important;
+          transform: translateY(44vh) !important;
+  }
+}
+/*# sourceMappingURL=main.css.map */
+@media only screen and (min-width: 1990px) {
+  .main-content .form-part .svg-rocket #Group1 #rocket {
+    -webkit-transform: translateY(44vh) !important;
+          transform: translateY(44vh) !important;
   }
 }
