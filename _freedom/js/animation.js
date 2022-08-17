@@ -21,6 +21,15 @@ let zeusContainer=document.getElementsByClassName('zeus-container')[0];
 let textPart=document.getElementsByClassName('text-part')[0];
 var Form=document.getElementsByClassName('form')[0];
 
+notifyMe.addEventListener('click',(e)=>{
+    e.preventDefault()
+    if(Form.checkValidity()){
+        let emailFiel=document.getElementById('email').value;
+        animation();
+        console.log(emailFiel);
+    }
+});
+
 function animation(){
     notifyMe.classList.add('notify')
     mail.classList.add('mail')
@@ -56,13 +65,3 @@ function animation(){
         })
     })
 }
-
-notifyMe.addEventListener('click',(e)=>{
-    e.preventDefault()
-    animation()
-    if(Form.checkValidity()){
-        let emailFiel=document.getElementById('email').value;
-        // animation()
-        console.log(emailFiel)
-    }
-});
