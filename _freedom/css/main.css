@@ -309,7 +309,7 @@ body {
 
 .main-content {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -372,7 +372,7 @@ body {
   place-items: center !important;
   height: 25rem;
   position: absolute;
-  bottom: 0;
+  bottom: -2%;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -487,7 +487,25 @@ body {
   -webkit-box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.2), inset 4px 4px 5px rgba(255, 255, 255, 0.25), inset -4px -4px 5px rgba(0, 0, 0, 0.2);
           box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.2), inset 4px 4px 5px rgba(255, 255, 255, 0.25), inset -4px -4px 5px rgba(0, 0, 0, 0.2);
 }
-
+#error-message{
+  position: absolute; 
+  bottom: -60px; 
+  left: 0px; 
+  background-color: #ffecec; 
+  color: rgb(255, 83, 83);
+  padding: 0px 10px;
+  height: 48px;
+  border-radius: 7px;
+  box-shadow: 2px 2px 12px #00000022;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+#error-message .fa-solid{
+  margin-right: 10px;
+  font-size: 18px;
+}
 .main-content .form-part .svg-rocket {
   position: absolute;
   bottom: 0;
@@ -530,8 +548,8 @@ body {
 /*# sourceMappingURL=main.css.map */
 @media (min-width: 1326px) and (max-width: 1989px) {
   .main-content .form-part .svg-rocket #Group1 #rocket {
-    -webkit-transform: translateY(40vh) !important;
-            transform: translateY(40vh) !important;
+    -webkit-transform: translateY(43vh) !important;
+            transform: translateY(43vh) !important;
   }
 }
 /*# sourceMappingURL=main.css.map */

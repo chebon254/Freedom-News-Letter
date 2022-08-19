@@ -9,6 +9,7 @@ let Rectangle37=document.getElementById('Rectangle37');
 let Rectangle36=document.getElementById('Rectangle36');
 let Polygon1=document.getElementById('Polygon1');
 let Polygon2=document.getElementById('Polygon2');
+let errorMessage=document.getElementById('error-message');
 // let smoke1=document.getElementById('smoke1');
 // let smoke2=document.getElementById('smoke2');
 // let smoke3=document.getElementById('smoke3');
@@ -20,15 +21,6 @@ let textToHide=document.getElementsByClassName('text-to-hide')[0];
 let zeusContainer=document.getElementsByClassName('zeus-container')[0];
 let textPart=document.getElementsByClassName('text-part')[0];
 var Form=document.getElementsByClassName('form')[0];
-
-notifyMe.addEventListener('click',(e)=>{
-    e.preventDefault()
-    if(Form.checkValidity()){
-        let emailFiel=document.getElementById('email').value;
-        animation();
-        console.log(emailFiel);
-    }
-});
 
 function animation(){
     notifyMe.classList.add('notify')
@@ -65,3 +57,19 @@ function animation(){
         })
     })
 }
+notifyMe.addEventListener('click',(e)=>{
+    e.preventDefault();
+    let text;
+    if(Form.checkValidity()){
+        errorMessage.style.visibility = "hidden";
+        text = "";
+        animation();
+    } else{
+        text = "<i class='fa-solid fa-triangle-exclamation'></i> Please Fill The Field";
+        errorMessage.style.visibility = "visible";
+        setTimeout(() => {
+            errorMessage.style.visibility = "hidden";
+        }, 2000);
+    }
+    document.getElementById("error-message").innerHTML = text;
+});
