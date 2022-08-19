@@ -317,7 +317,8 @@ body {
   height: 100vh;
   min-width: 1029px;
   max-width: 1500px;
-  max-height: 629px;
+  max-height: ;
+  overflow: hidden;
 }
 
 .main-content .zeus-container {
@@ -340,6 +341,9 @@ body {
   left: 0;
   right: 0;
   bottom: 25rem;
+}
+#capital g path{
+  color: #2c65d6 !important;
 }
 
 .main-content .text-part .logo svg {
@@ -372,7 +376,7 @@ body {
   place-items: center !important;
   height: 25rem;
   position: absolute;
-  bottom: -2%;
+  bottom: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -548,8 +552,8 @@ body {
 /*# sourceMappingURL=main.css.map */
 @media (min-width: 1326px) and (max-width: 1989px) {
   .main-content .form-part .svg-rocket #Group1 #rocket {
-    -webkit-transform: translateY(43vh) !important;
-            transform: translateY(43vh) !important;
+    -webkit-transform: translateY(40vh) !important;
+            transform: translateY(40vh) !important;
   }
 }
 /*# sourceMappingURL=main.css.map */

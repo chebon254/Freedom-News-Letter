@@ -65,7 +65,7 @@ notifyMe.addEventListener('click',(e)=>{
         text = "";
         animation();
     } else{
-        text = "<i class='fa-solid fa-triangle-exclamation'></i> Please Fill The Field";
+        text = "<i class='fa-solid fa-triangle-exclamation'></i> Enter Valid Email Address";
         errorMessage.style.visibility = "visible";
         setTimeout(() => {
             errorMessage.style.visibility = "hidden";
