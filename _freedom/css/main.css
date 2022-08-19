@@ -376,7 +376,7 @@ body {
   place-items: center !important;
   height: 25rem;
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: 0;
   right: 0;
   margin: 0 auto;
