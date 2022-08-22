@@ -1,6 +1,7 @@
 //get DOM element
 let notifyMe=document.getElementById('submit');
 let mail=document.getElementById('email');
+let errorMessage=document.getElementById('error-message');
 let letter=document.getElementById('letter');
 let rocketHead=document.getElementById('head');
 let rocketSmoke=document.getElementById('rocket-smoke');
@@ -9,7 +10,6 @@ let Rectangle37=document.getElementById('Rectangle37');
 let Rectangle36=document.getElementById('Rectangle36');
 let Polygon1=document.getElementById('Polygon1');
 let Polygon2=document.getElementById('Polygon2');
-let errorMessage=document.getElementById('error-message');
 // let smoke1=document.getElementById('smoke1');
 // let smoke2=document.getElementById('smoke2');
 // let smoke3=document.getElementById('smoke3');
@@ -57,6 +57,7 @@ function animation(){
         })
     })
 }
+
 notifyMe.addEventListener('click',(e)=>{
     e.preventDefault();
     let text;
@@ -69,7 +70,7 @@ notifyMe.addEventListener('click',(e)=>{
         errorMessage.style.visibility = "visible";
         setTimeout(() => {
             errorMessage.style.visibility = "hidden";
-        }, 2000);
+        }, 4000);
     }
     document.getElementById("error-message").innerHTML = text;
 });

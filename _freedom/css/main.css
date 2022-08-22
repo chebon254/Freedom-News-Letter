@@ -305,31 +305,33 @@ body, html {
 body {
   position: relative;
   overflow-y: auto;
+  overflow: hidden;
 }
 
 .main-content {
   position: absolute;
   bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
   width: 100%;
   height: 100vh;
-  min-width: 1029px;
   max-width: 1500px;
-  overflow: hidden;
+  max-height: 629px;
 }
-
-.main-content .zeus-container {
-  position: absolute;
+.zeus-container{
+  height: fit-content;
   width: 100%;
-  top: -330px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -330px;;
 }
-
-.main-content .zeus-container #zeus-svg {
-  opacity: 0;
-  width: 60px;
+.zeus-container img{
+  width: 25%;
+  margin: auto;
 }
 
 .main-content .text-part {
@@ -339,9 +341,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-}
-#capital g path{
-  color: #2c65d6 !important;
+  bottom: 25rem;
 }
 
 .main-content .text-part .logo svg {
@@ -372,8 +372,9 @@ body {
   display: -ms-grid;
   display: grid;
   place-items: center !important;
+  height: 25rem;
   position: absolute;
-  bottom: -20px;
+  bottom: -2%;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -507,6 +508,7 @@ body {
   margin-right: 10px;
   font-size: 18px;
 }
+
 .main-content .form-part .svg-rocket {
   position: absolute;
   bottom: 0;
@@ -531,6 +533,8 @@ body {
 }
 
 .main-content .form-part .svg-rocket #Group1 #rocket {
+  -webkit-transform: translateY(44vh);
+          transform: translateY(44vh);
   -webkit-transform-origin: center;
           transform-origin: center;
 }
@@ -547,41 +551,66 @@ body {
   opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */
-@media (min-width: 1327px) and (max-width: 1989px) {
-  .main-content .text-part {
-    bottom: 25rem;
+
+
+/* == Responsive === */
+@media only screen and (max-width: 992px) {
+  @-webkit-keyframes letter {
+    100% {
+      -webkit-transform: rotate(80deg);
+              transform: rotate(80deg);
+      top: 300%;
+    }
   }
-  .main-content .form-part {
-    height: 25rem;
+  
+  @keyframes letter {
+    100% {
+      -webkit-transform: rotate(80deg);
+              transform: rotate(80deg);
+      top: 300%;
+    }
+  }
+  .main-content {
+    position: absolute;
+    bottom: 0;
+  }
+  .text-part{
+    width: 100%;
+  }
+  .text-part .logo{
+    width: 100%;
+    text-align: center;
+  }
+  .text-part .logo img{
+    width: 86%;
+    margin: auto;
+  }
+  .hide-text{
+    text-align: center;
+  }
+  .text-to-hide{
+    font-size: 16px !important;
+  }
+  .form-part form{
+    height: fit-content;
+    width: 40.4vw;
+    min-width: 280px;
+  }
+  .form-part form #email{
+    width: 67.5% !important;
+    font-size: 16px !important;
+    max-width: 362px;
+    min-width: 189px;
+    flex-grow: auto;
+  }
+  .form-part form #submit{
+    width: 32.5% !important;
+    font-size: 16px !important;
+    max-width: 174px;
+    min-width: 91px;
+    flex-grow: auto;
   }
   .main-content .form-part .svg-rocket #Group1 #rocket {
-    -webkit-transform: translateY(39vh) !important;
-            transform: translateY(39vh) !important;
-  }
-}
-/*# sourceMappingURL=main.css.map */
-@media only screen and (max-width: 1326px) {
-  .main-content .text-part {
-    bottom: 25rem;
-  }
-  .main-content .form-part {
-    height: 25rem;
-  }
-  .main-content .form-part .svg-rocket #Group1 #rocket {
-    -webkit-transform: translateY(43vh) !important;
-          transform: translateY(43vh) !important;
-  }
-}
-/*# sourceMappingURL=main.css.map */
-@media only screen and (min-width: 1990px) {
-  .main-content .text-part {
-    bottom: 25rem;
-  }
-  .main-content .form-part {
-    height: 25rem;
-  }
-  .main-content .form-part .svg-rocket #Group1 #rocket {
-    -webkit-transform: translateY(43vh) !important;
-          transform: translateY(43vh) !important;
+    width: 200px !important;
   }
 }
